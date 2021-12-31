@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <header>Weather App <img src="./images/sun-color.svg" alt="sun"></header>
+    <div class="flex-container">
+      <div class="container">
+        <div class="input">
+          <input
+            id="search-box"
+            type="text"
+            placeholder="Enter your city"
+            required
+          />
+          <button id="search">Search</button>
+          <br />
+          <label for="unit">
+            <label for="metric"
+              ><input type="radio" name="unit" value="metric" checked />C</label
+            >
+            <label for="imperial"
+              ><input
+                type="radio"
+                name="unit"
+                value="imperial"
+                checked
+              />F</label
+            >
+          </label>
+        </div>
+        <div id="content">
+          <span class="large"><h1 id="temperature"></h1></span>
+          <h2 id="city"></h2>
+          <img id="icon" src="" alt="">
+        </div>
+      </div>
+    </div>
+    <footer>
+      Made by
+      <a href="https://github.com/dumb-programmer" target="_blank"
+        >dumb-programmer</a
+      >
+    </footer>
     <script src="./app.js"></script>
   </body>
 </html>

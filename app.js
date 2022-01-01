@@ -1,6 +1,6 @@
 async function getData(location, unit) {
   const request = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unit}&APPID=94eb5743519430c4420da984422eb6f5`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unit}&APPID=94eb5743519430c4420da984422eb6f5`,
     { mode: "cors" }
   );
   const data = await request.json();
@@ -18,7 +18,6 @@ const btn = document.getElementById("search");
 btn.addEventListener("click", () => {
   const input = document.querySelector("input");
   const unit = document.querySelector("label>input[name='unit']:checked").value;
-  console.log(unit);
   const location = input.value;
   getData(location, unit)
     .then((data) => {
